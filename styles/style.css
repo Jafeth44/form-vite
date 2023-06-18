@@ -2,15 +2,25 @@ body {
   background-color: rgba(5, 13, 37, 0.781);
   font-family: sans-serif;
   color: white;
+  display: flex;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 100vh;
 }
 
 #app,
-body,
 #form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#app, #password-box {
+  padding: 10px;
+  width: 50%;
 }
 
 #form {
@@ -48,6 +58,10 @@ label:has(input.error)::after {
   content: "\f00d";
   position: absolute;
   transform: translate(40%, 20%);
+}
+
+body.swal2-height-auto {
+  height: 100vh !important;
 }
 
 /*# sourceMappingURL=style.css.map */

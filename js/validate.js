@@ -84,7 +84,7 @@ export function fetchData(form) {
         } else {
             Swal.fire({
                 icon: "error",
-                title: "Please check the input values and retry.",
+                title: "Please check the input values and try again",
                 confirmButtonText: "continue"
             })
         }

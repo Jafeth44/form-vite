@@ -1,6 +1,7 @@
 import '../styles/style.css'
 import '/node_modules/@fortawesome/fontawesome-free/css/all.css'
 import { inputValidation, passwordConfirm, fetchData } from './validate'
+import { passwordGenerator } from './passwordGenerator';
 
 document.querySelector('#app').innerHTML = /*html*/`
   <form id="form">
@@ -22,6 +23,13 @@ document.querySelector('#app').innerHTML = /*html*/`
     <input type="submit" value="Register">
   </form>
 `
+document.querySelector('#password-box').innerHTML = /*html*/`
+  <h2>New!</h2>
+  <p>Try our brand new password generator, it's free!</p>
+  <input type="password" id="generated-password" readonly>
+  <button id="btn-show">show / hide</button>
+  <button id="btn-generator">NEW PASSWORD</button>
+`
 
 inputValidation(document.querySelector("#firstName"), "name");
 inputValidation(document.querySelector("#lastName"), "name");
@@ -29,3 +37,12 @@ inputValidation(document.querySelector("#email"), "email");
 inputValidation(document.querySelector("#password"), "password");
 passwordConfirm(document.querySelector("#password"),document.querySelector("#passwordRepeat"));
 fetchData(document.querySelector("form"));
+passwordGenerator(document.querySelector('#btn-generator'),document.querySelector('#generated-password'));
+
+document.querySelector("#btn-show").addEventListener('click', () => {
+  if (document.querySelector("#generated-password").type == 'password') {
+    document.querySelector("#generated-password").type = 'text';
+  } else {
+    document.querySelector("#generated-password").type = 'password';
+  }
+})
