@@ -75,6 +75,11 @@ export function fetchData(form) {
                 );
             const data = JSON.stringify(newUser);
             console.log(data);
+            form.firstName.classList.remove('success');
+            form.lastName.classList.remove('success');
+            form.email.classList.remove('success');
+            form.password.classList.remove('success');
+            form.passwordRepeat.classList.remove('success');
             form.reset();
         } else {
             Swal.fire({
