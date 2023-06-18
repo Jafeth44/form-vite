@@ -1,5 +1,5 @@
-// import '../styles/style.css'
-// import '/node_modules/@fortawesome/fontawesome-free/css/all.css'
+import '../styles/style.css'
+import '/node_modules/@fortawesome/fontawesome-free/css/all.css'
 import { inputValidation, passwordConfirm, fetchData } from './validate'
 import { passwordGenerator } from './passwordGenerator';
 
