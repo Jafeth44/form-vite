@@ -11,7 +11,8 @@ body {
 }
 
 #app,
-#form {
+#form,
+#password-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,7 +20,7 @@ body {
 }
 
 #app, #password-box {
-  padding: 10px;
+  height: 100vh;
   width: 50%;
 }
 

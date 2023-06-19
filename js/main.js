@@ -24,11 +24,13 @@ document.querySelector('#app').innerHTML = /*html*/`
   </form>
 `
 document.querySelector('#password-box').innerHTML = /*html*/`
-  <h2>New!</h2>
-  <p>Try our brand new password generator, it's free!</p>
-  <input type="password" id="generated-password" readonly>
-  <button id="btn-show">show / hide</button>
-  <button id="btn-generator">NEW PASSWORD</button>
+  <div>
+    <h2>New!</h2>
+    <p>Try our brand new password generator, it's free!</p>
+    <input type="password" id="generated-password" readonly>
+    <button id="btn-show">show / hide</button>
+    <button id="btn-generator">NEW PASSWORD</button>
+  </div>
 `
 
 inputValidation(document.querySelector("#firstName"), "name");
